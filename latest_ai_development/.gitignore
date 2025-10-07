@@ -1,0 +1,34 @@
+# Entornos virtuales y variables de entorno
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Cache de Python y archivos compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Carpetas de configuración de IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos y carpetas de Gradio
+.gradio/
+
+# Archivos de salida generados por la crew
+respuesta.md
+report.md
+
+# Artefactos de construcción de paquetes
+build/
+dist/
+*.egg-info/

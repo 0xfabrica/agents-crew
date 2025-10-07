@@ -1,0 +1,52 @@
+triage_task:
+  description: >
+    Analyze the user's question: "{user_question}".
+    Your first decision is critical:
+    1. If it's a simple greeting or a question you can answer directly, provide the answer yourself.
+    2. If it requires external information or code, reformulate the original question into a clear, actionable prompt for a specialist agent.
+  expected_output: >
+    Either the direct, final answer for a simple question, OR a clear, refined prompt for the next agent in the crew.
+  agent: OrchestratorAgent
+
+web_search_task:
+  description: >
+    Using the refined prompt from the triage_task, perform a broad web search to identify key concepts and terminology.
+  expected_output: >
+    A bulleted list of key findings, which will serve as the starting point for deep research.
+  agent: WebReconAgent
+  context:
+    - triage_task
+
+deep_research_task:
+  description: >
+    Based on the initial findings from the web_search_task, conduct a deep, academic-focused investigation.
+    Explain the theory, algorithms, and relevant mathematical details.
+  expected_output: >
+    A detailed, academically rigorous text explaining the user's question. This forms the theoretical basis of the final report.
+  agent: AcademicResearcherAgent
+  context:
+    - web_search_task
+
+practical_code_task:
+  description: >
+    Based on the research findings, provide a practical Python code example.
+    Ensure the code is clean, commented, and relevant to the theory explained.
+  expected_output: >
+    A commented Python code block.
+  agent: CodeSynthesistAgent
+  context:
+    - web_search_task
+    - deep_research_task
+
+final_response_task:
+  description: >
+    Combine the detailed research and the practical code example into a single, cohesive response for the user.
+    BEFORE writing, you MUST read 'knowledge/user_preference.txt' to tailor the response.
+    Adopt a conversational, expert tutor tone.
+  expected_output: >
+    A complete, friendly, and well-structured Markdown response.
+  agent: LeadTutorAgent
+  output_file: respuesta.md
+  context:
+    - deep_research_task
+    - practical_code_task

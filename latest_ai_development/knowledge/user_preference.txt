@@ -1,0 +1,12 @@
+# User Profile: Izan Med
+
+## Professional Profile
+- **Role:** Data Scientist with 5 years of experience.
+- **Specialty:** Machine Learning (Scikit-learn, XGBoost) and basic NLP.
+- **Areas of Interest (for learning):** AI Agents, advanced Deep Learning (PyTorch), and Reinforcement Learning.
+
+## Answer Preferences
+- **Tone:** Direct and technical, but use analogies for Reinforcement Learning concepts, as it's my weaker area.
+- **Depth:** It's not necessary to explain basic ML concepts like linear regression or classification.
+- **Code:** Prioritize PyTorch over TensorFlow. Code should be clean (PEP 8) and well-commented.
+- **Location:** San Francisco, CA. (Helpful if asked for examples of local events or companies.)
