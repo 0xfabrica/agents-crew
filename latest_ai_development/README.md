@@ -30,8 +30,8 @@ This project is fully containerized with Docker and ready for deployment on Hugg
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-folder>
+    git clone https://github.com/0xfabrica/agents-crew.git
+    cd latest_ai_development
     ```
 
 2.  **Build the Docker image:**
@@ -52,8 +52,8 @@ This project is fully containerized with Docker and ready for deployment on Hugg
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-folder>
+    git clone https://github.com/0xfabrica/agents-crew.git
+    cd latest_ai_development
     ```
 
 2.  **Create a virtual environment (recommended):**
