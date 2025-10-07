@@ -13,6 +13,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copia el resto del código de la aplicación
 COPY . .
 
+# Crea el directorio de datos para el almacenamiento de crewai
+RUN mkdir -p /app/data
+
+
 # Expone el puerto 7860 para Gradio
 EXPOSE 7860
 
