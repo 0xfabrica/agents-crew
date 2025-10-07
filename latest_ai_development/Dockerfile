@@ -22,6 +22,7 @@ EXPOSE 8000
 # Define las variables de entorno
 ENV OPENAI_API_KEY=""
 ENV PERPLEXITY_API_KEY=""
+ENV XDG_DATA_HOME="/app/data"
 
 # Ejecuta app.py cuando el contenedor se inicie
 CMD ["python", "app.py"]
