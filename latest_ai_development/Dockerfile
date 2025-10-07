@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Crea el directorio de datos y asigna los permisos correctos
-RUN mkdir -p /app/data && chown -R 1000:1000 /app/data
+# RUN mkdir -p /app/data && chown -R 1000:1000 /app/data
 
 # Expone el puerto 7860 para Gradio
 EXPOSE 7860
@@ -25,7 +25,7 @@ EXPOSE 8000
 # Define las variables de entorno
 ENV OPENAI_API_KEY=""
 ENV PERPLEXITY_API_KEY=""
-ENV XDG_DATA_HOME="/app/data"
+ENV XDG_DATA_HOME="/tmp/crewai_cache"
 
 # Ejecuta app.py cuando el contenedor se inicie
 CMD ["python", "app.py"]
